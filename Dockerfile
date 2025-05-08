@@ -39,4 +39,6 @@ COPY root/ /
 
 # ports and volumes
 EXPOSE 8096 8920
-VOLUME /config
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+CMD ["/start.sh"]
